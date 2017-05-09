@@ -18,7 +18,7 @@
       },
 
       closestStations: function(allStationData) {
-        return allStationData.result.slice(0,15);
+        return allStationData.result.slice(0,5);
       }
 
     };

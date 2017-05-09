@@ -3,6 +3,7 @@
   <head>
     <title>Jasmine Spec Runner</title>
     <link rel="stylesheet" href="../bower_components/jasmine-core/lib/jasmine-core/jasmine.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   </head>
   <body>
     <script src="../bower_components/jasmine-core/lib/jasmine-core/jasmine.js"></script>
@@ -11,8 +12,12 @@
 
     <!-- include source files here... -->
     <script src="../app/src/geolocation.js"></script>
+    <script src="./mockJson.js"></script>
+    <script src="../app/src/stationLocationDataSourcing.js"></script>
+    <script src="../app/src/stationsModel.js"></script>
     <!-- include spec files here... -->
     <script src="spec/test.js"></script>
+    <script src="spec/stationLocator/stationsModelSpec.js"></script>
     <script src="spec/geolocation/geolocation_spec.js"></script>
   </body>
 </html>
