@@ -2,12 +2,12 @@
   function stationLocationDataSourcing(lon, lat) {
     this.longitude = lon;
     this.latitude = lat;
-    var self = this;
-    this.allStationData = '';
+
     this.httpGet = function() {
       var url = "http://data.gov.uk/data/api/service/transport/naptan_railway_stations/nearest?lat=" + this.latitude + "&lon=" + this.longitude;
       var xmlHttp = new XMLHttpRequest();
       xmlHttp.open( "GET", url, true ); // false for synchronous request
+
       xmlHttp.onreadystatechange = function() {
         if (this.readyState === XMLHttpRequest.DONE && this.status == 200) {
           var data = xmlHttp.responseText;
@@ -16,7 +16,6 @@
       };
 
       xmlHttp.send( null );
-      return xmlHttp.responseText;
     };
 
 }
