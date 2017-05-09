@@ -23,24 +23,26 @@
 
     this.callGeolocator = function(){
       navigator.geolocation.getCurrentPosition(this.success,this.error);
-    }
+    };
 
     this.success = function(pos){
-      this.coordinates = pos.coords
+      var coordinates = pos.coords
       console.log('Your current position is:');
       console.log(`Latitude : ${coordinates.latitude}`);
       console.log(`Longitude: ${coordinates.longitude}`);
       console.log(`More or less ${coordinates.accuracy} meters.`);
-      // updateState(pos)
-    }
-    this.updateState = function(pos){
-      this.coordinates = pos.coords;
-      this.hasGotCoordinates = true;
-    }
+      updateState(pos)
+    };
+
+    updateState = function(pos){
+      Geolocator.coordinates = pos.coords;
+      Geolocator.hasGotCoordinates = true;
+      debugger;
+    };
 
     this.error = function(err){
       console.warn(`ERROR(${err.code}): ${err.message}`);
-    }
+    };
   }
 
   // function callGeolocator(){
