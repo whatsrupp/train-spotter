@@ -8,4 +8,9 @@ describe('Stations', function() {
   it('starts with 5 stations', function() {
     expect(stations.list.length).toEqual(5)
   });
+
+  it('returns the first station', function() {
+    var stn = stations.getLikelyStation();
+    expect(stn.stationname).toEqual('Plumstead Rail Station')
+  });
 });
