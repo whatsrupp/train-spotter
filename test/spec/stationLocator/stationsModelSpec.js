@@ -2,7 +2,7 @@ describe('Stations', function() {
   var stations
 
   beforeEach(function(){
-    stations = new Stations()
+    stations = new Stations(data.result.slice(0,5))
   });
 
   it('starts with 5 stations', function() {

@@ -1,9 +1,10 @@
 (function(exports) {
-  function Stations(lon, lat){
-    this.stationProcessor = new stationLocationDataSourcing(lon, lat);
-    // mock station list dataString()
-    this.list = this.stationProcessor.closestStations();
-  };
+  function Stations(stations){
+    // this.stationProcessor = new stationLocationDataSourcing(lon, lat);
+    // // mock station list dataString()
+    // this.stationProcessor.generateURL();
+    this.list = stations;
+  }
 
   Stations.prototype = {
     getLikelyStation: function() {
