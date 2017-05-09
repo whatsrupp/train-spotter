@@ -10,11 +10,11 @@
     }.bind(this);
 
     this.success = function(position){
-      var coordinates = saveCurrentCoordinates(position)
+      var coordinates = this.saveCurrentCoordinates(position)
       this.outputAPIcallStatus(coordinates);
     }.bind(this);
 
-    this.saveCurrentCoordinates(position){
+    this.saveCurrentCoordinates = function (position){
       coordinates = {
         latitude: position.coords.latitude,
         longitude: position.coords.longitude,
