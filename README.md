@@ -34,3 +34,17 @@ To start thing off we outlined our key problem statement and brainstormed some f
 Key focuses on:
 - Which platform to deploy on?
 - Which APIs for messaging, trains and geolocation already exist?
+
+#### 3) User Stories:
+
+```
+As a commuter
+I want...
+```
+```
+the app to find out the nearest station
+the app to tell me what train I'm currently on
+to tell the app where I'm going
+the ability to send my travel details to my friend
+the app to check for delay updates?
+```
