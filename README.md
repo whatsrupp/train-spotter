@@ -39,12 +39,30 @@ Key focuses on:
 
 ```
 As a commuter
+I want the app to find out the nearest station
+so that I don't have to input it myself
+```
+```
+As a commuter
+I want the app to tell me what train I'm currently on
+so that I can inform my friends
+```
+```
+As a commuter
+I want to tell the app where I'm going
+so that it can tell me the estimated arrival time
+```
+```
+As a commuter
+I want the ability to send my travel details to my friend
+so that they know when I'd due to arrive
+```
+```
+As a commuter
+I want the app to inform my friends of any delays to my journey
+so that they know I'm delayed en route
+```
+```
+As a commuter
 I want...
-```
-```
-the app to find out the nearest station
-the app to tell me what train I'm currently on
-to tell the app where I'm going
-the ability to send my travel details to my friend
-the app to check for delay updates?
 ```
