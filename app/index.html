@@ -7,12 +7,25 @@
 
   <body>
     <h1>Train Locator</h1>
+
     <div id="app">Hello</div>
+
+
+    <div>
+      <form class="destination" action='#destination' method='post'>
+        Where are you going: <input type="text" id="destination" />
+        <button type="submit" id='create'>Submit</button>
+      </form>
+    </div>
+    <div class='usr-destination'></div>
+
+
     <script src='src/stationFinder.js'></script>
     <script src='src/stationsModel.js'></script>
     <script src='src/geolocator.js'></script>
     <script src='../test/spec/mockedAPIS/mockJson.js'></script>
     <script src='src/initializer.js'></script>
+    <script src='src/destinationModel.js'></script>
     <script src='src/index.js'></script>
   </body>
 </html>
