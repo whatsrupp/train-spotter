@@ -12,9 +12,7 @@
       this.stationFinder.getStations();
     },
     execute: function() {
-
       this.callGeolocator();
-      // this.callStationLocator();
     }
   };
 
