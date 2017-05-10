@@ -23,7 +23,7 @@ var items = '';
         var destination = this.destination;
         var defaultURL = urlPartOne + startStation + urlPartTwo + destination + urlPartThree;
 
-        return defaultURL
+        return defaultURL;
       },
 
       getPotentialTrains: function() {
@@ -33,13 +33,13 @@ var items = '';
           url: defaultURL,
           success: function(data) {
             var trainData = data.departures;
-            this.setTrainData(trainData)
+            this.setTrainData(trainData);
           }.bind(this)
-        })
+        });
       },
 
       setTrainData: function(data) {
-        this.trainData = data
+        this.trainData = data;
       },
 
 
