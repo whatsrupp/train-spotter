@@ -1,9 +1,10 @@
 (function(exports){
 
-  function Geolocator(){
+  function Geolocator(stationFinder){
 
     this.coordinates = {}
     this.hasGotCoordinates = false;
+    this.stationFinder = stationFinder;
 
     this.getLocation = function(){
       navigator.geolocation.getCurrentPosition(this.success,this.error);
@@ -12,6 +13,9 @@
     this.success = function(position){
       var coordinates = this.saveCurrentCoordinates(position)
       this.outputAPIcallStatus(coordinates);
+      var longitude = coordinates.longitude;
+      var latitude = coordinates.latitude;
+      this.stationFinder.getStations(longitude, latitude);
     }.bind(this);
 
     this.saveCurrentCoordinates = function (position){
