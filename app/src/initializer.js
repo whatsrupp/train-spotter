@@ -16,7 +16,7 @@
       this.callGeolocator();
       // this.callStationLocator();
     }
-  }
+  };
 
   exports.Initializer = Initializer;
 })(this);

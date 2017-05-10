@@ -2,7 +2,7 @@
 
   function Geolocator(stationFinder){
 
-    this.coordinates = {}
+    this.coordinates = {};
     this.hasGotCoordinates = false;
     this.stationFinder = stationFinder;
 
@@ -11,7 +11,7 @@
     }.bind(this);
 
     this.success = function(position){
-      var coordinates = this.saveCurrentCoordinates(position)
+      var coordinates = this.saveCurrentCoordinates(position);
       this.outputAPIcallStatus(coordinates);
       var longitude = coordinates.longitude;
       var latitude = coordinates.latitude;
@@ -22,17 +22,17 @@
       coordinates = {
         latitude: position.coords.latitude,
         longitude: position.coords.longitude,
-        }
+      };
 
       this.coordinates = coordinates;
       this.hasGotCoordinates = true;
       return coordinates;
-    }
+    };
 
     this.outputAPIcallStatus = function (coordinates){
       console.log(`Latitude : ${coordinates.latitude}`);
       console.log(`Longitude: ${coordinates.longitude}`);
-    }
+    };
 
     updateState = function(pos){
       Geolocator.coordinates = pos.coords;
