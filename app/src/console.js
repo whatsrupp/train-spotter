@@ -1,3 +1,3 @@
-train = new GetTrains();
+var train = new GetTrains();
 train.trainURL()
 trainData
