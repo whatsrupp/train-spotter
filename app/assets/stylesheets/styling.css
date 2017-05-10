@@ -4,7 +4,7 @@
   margin-bottom: 0;
   border-radius: 0;
 }
-body { background: navy !important; }
+
 
 input.placeholder {
     text-align: center;
@@ -13,11 +13,6 @@ input.placeholder {
 .row.content {height: 450px}
 
 /* Set gray background color and 100% height */
-.sidenav {
-  padding-top: 20px;
-  background-color: #f1f1f1;
-  height: 100%;
-}
 
 
 
