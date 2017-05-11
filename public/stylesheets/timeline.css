@@ -3,7 +3,7 @@
 }
 
 body, html, .container{
-  background-color:#5CB3FF;
+
   height: 100%;
 
 
@@ -16,7 +16,7 @@ body, html, .container{
 }
 
 ul{
-  height:100%;
+  height:60%;
 }
 
 ul > .button {}

@@ -25,6 +25,12 @@ $(document).ready(function() {
     updateMsg();
   };
 
+  function goToHomePage(){
+    $('#train-info').removeClass('hidden');
+    $('#finder').removeClass('hidden');
+    $('#finder').addClass('hidden');
+  }
+
   function switchView() {
     $('#train-info').toggleClass('hidden');
     $('#finder').toggleClass('hidden');

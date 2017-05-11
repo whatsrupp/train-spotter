@@ -4,15 +4,33 @@
   margin-bottom: 0;
   border-radius: 0;
 }
+.glyphicon.glyphicon-home{
+  color: white;
+}
 
+#welcome{
+  color: white;
+}
+#destination{
+  width: 60%;
+  margin:auto;
+}
+
+#home-page-div > input{
+}
 html {
-  background-color: #d3e4ff;
 }
 
 body {
-
+  background-image: url("/images/1511.jpg");
+  background-size: cover;
+s
 }
 
+.navbar{
+  /*background-color: #5CB3FF !important;*/
+  background: rgba(92, 179, 255, 0.7);
+}
 input.placeholder {
     text-align: center;
 }

@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Find My Train</title>
+    <link rel="shortcut icon" type="image/png" href="/images/underground.png"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="/stylesheets/styling.css" />
@@ -28,26 +29,22 @@
   <body>
     <div class="container-fluid text-center">
       <div id="finder" class="row content">
-        <div class="col-sm-2 sidenav">
-        </div>
-        <div class="col-sm-8 text-center">
-          <h1>Welcome</h1>
+
+        <div class="col-sm-12 text-center" id='home-page-div'>
+          <h1 id='welcome'>Welcome</h1>
           <input type="text" class="form-control" id="destination" placeholder='Where are you going?'>
           <hr>
 
           <button type="button" id="create" class="btn btn-primary btn-lg" >Find My Train!</button>
-
         </div>
-        <div class="col-sm-2 sidenav">
 
-        </div>
       </div>
     </div>
 
-      <div class="container">
-        <ul class="timeline hidden" id='train-info'>
+      <div class="container hidden" id='train-info'>
+        <ul class="timeline">
             <li>
-              <div class="timeline-badge"><i class="glyphicon glyphicon-road"></i></div>
+              <div class="timeline-badge primary"><i class="glyphicon glyphicon-road"></i></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h4 class="timeline-title" id='terminus-station'></h4>
@@ -99,9 +96,6 @@
           </ul>
       </div>
 
-    <footer class="navbar navbar-fixed-bottom text-center">
-      <p>About</p>
-    </footer>
 
 
     <script src='scripts/journey.js'></script>
@@ -118,4 +112,7 @@
     <script src='scripts/index.js'></script>
 
   </body>
+  <footer class="navbar navbar-fixed-bottom text-center">
+    <p>About</p>
+  </footer>
 </html>
