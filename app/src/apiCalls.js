@@ -60,6 +60,7 @@
     var finalDestination = data.destination_name;
     var operator = data.operator_name;
     var stops = data.stops;
+    userJourney.updateStopOfInterest(stopOfInterest);
     var i;
     for (i = 0; i < stops.length; i++) {
        if(stops[i].station_code == stopOfInterest) {
