@@ -29,13 +29,11 @@ var items = '';
       getPotentialTrains: function() {
 
         defaultURL = this.trainURL();
-        $.ajax({
-          url: defaultURL,
-          success: function(data) {
-            var trainData = data.departures;
-            this.setTrainData(trainData);
-          }.bind(this)
-        });
+        $.get(defaultURL, function(data){
+          var trainData = data.departures;
+          this.setTrainData(trainData);
+        }.bind(this)
+        );
       },
 
       setTrainData: function(data) {
