@@ -4,7 +4,7 @@
     this.stopOfInterest = '';
     this.finalDestination
     this.operator
-    this.ArrivalTime
+    this.arrivalTime
   }
 
   Journey.prototype = {
@@ -22,6 +22,22 @@
 
     updateArrivalTime: function(arrivalTime) {
       this.arrivalTime = arrivalTime;
+    },
+
+    updateDepTime: function(deptTime) {
+      this.deptTime = deptTime;
+    },
+
+    updatePlatform: function(platform) {
+      this.platform = platform;
+    },
+
+    updateStationName: function(closestStation) {
+      this.closestStation = closestStation;
+    },
+
+    updateSOIName: function(stopOfInterestName) {
+        this.stopOfInterestName = stopOfInterestName;
     }
 
   };
