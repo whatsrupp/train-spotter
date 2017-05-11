@@ -4,10 +4,11 @@
 
 
   describe('Finding user location', function () {
+    var geolocator = new Geolocator();
+    
     describe('Makes a call on the API', function () {
 
       it('should return call the geolocator html api', function(){
-        var geolocator = new Geolocator ();
         spyOn(navigator.geolocation, 'getCurrentPosition');
         geolocator.getLocation();
         expect(navigator.geolocation.getCurrentPosition).toHaveBeenCalled();
