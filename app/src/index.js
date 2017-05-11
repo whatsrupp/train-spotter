@@ -4,6 +4,8 @@
 // var initialize = new Initializer(geolocator, stationFinder);
 
 // -0.086092, 51.5077
+
+
 $(document).ready(function() {
   userJourney = new Journey();
   dest = new Destination();
