@@ -38,6 +38,7 @@ $(document).ready(function() {
     $('#finder').toggleClass('hidden');
   };
 
+// WIP
   function sendToFriend() {
     document.getElementById('whatsapp').addEventListener('click', function(clickEvent) {
       clickEvent.preventDefault();
