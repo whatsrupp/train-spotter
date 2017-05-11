@@ -2,8 +2,21 @@
   outline: 1px solid black;
 }
 
+body, html, .container{
+  background-color:#5CB3FF;
+  height: 100%;
+
+
+}
+.timeline-panel{
+  background-color: white;
+}
 .timeline-button{
   width: 100%;
+}
+
+ul{
+  height:100%;
 }
 
 ul > .button {}
@@ -86,10 +99,10 @@ ul > .button {}
 
         .timeline > li > .timeline-badge {
             color: #fff;
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            font-size: 1.4em;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            font-size: 1.1em;
             text-align: center;
             position: absolute;
             top: 16px;
@@ -157,19 +170,19 @@ ul > .button {}
 
 @media (max-width: 2000px) {
     ul.timeline:before {
-        left: 40px;
+        left: 17px;
     }
 
     ul.timeline > li > .timeline-panel {
-        width: calc(100% - 90px);
-        width: -moz-calc(100% - 90px);
-        width: -webkit-calc(100% - 90px);
+        width: calc(100% - 70px);
+        width: -moz-calc(100% - 70px);
+        width: -webkit-calc(100% - 45px);
     }
 
     ul.timeline > li > .timeline-badge {
-        left: 15px;
+        left: 5px;
         margin-left: 0;
-        top: 16px;
+        top: 30px;
     }
 
     ul.timeline > li > .timeline-panel {
