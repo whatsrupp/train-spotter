@@ -21,21 +21,8 @@ $(document).ready(function() {
 
   function captureUserDestination() {
     dest.saveDestination(document.getElementById('destination').value);
-    updateInfo();
     switchView();
     updateMsg();
-  };
-
-  function updateInfo() {
-    $('#usr-destination').append(dest.getText());
-    // get train operator
-    $('#train-operator').append('Thameslink');
-    // get last stationFinder
-    $('#last-station').append('London St Pancras');
-    // get arrival time
-    $('#arrival-time').append('18:56');
-    // get terminus
-    $('#terminus-station').append('Bedford');
   };
 
   function switchView() {
@@ -47,7 +34,6 @@ $(document).ready(function() {
     $('a').click(function() {
       var generateMsg = "I'm%20on%20my%20way"
       var url = "https://api.whatsapp.com/send?text=" + generateMsg;
-      // debugger;
       $('#whatsapp').attr("href", url);
     });
   };

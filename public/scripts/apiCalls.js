@@ -34,8 +34,6 @@
       var getTrainsAPIurl = urlPartOne + startStation + urlPartTwo + destination + urlPartThree;
 
       getPotentialTrains(getTrainsAPIurl)
-      // userStations = new Stations(fiveStations);
-     console.log("GPS and Station APIs successful")
   }
   function error (err){
     console.warn(`ERROR(${err.code}): ${err.message}`);
@@ -44,6 +42,10 @@
   function getPotentialTrains(url) {
     $.get(url, function(data){
       getTrainsCallback(data);
+      // debugger;
+      userJourney.updateDepTime(data.departures.all[0].aimed_departure_time);
+      userJourney.updatePlatform(data.departures.all[0].platform);
+      userJourney.updateStationName(data.station_name);
     });
   }
 
@@ -68,6 +70,8 @@
         //  unfinsed -- need to display this on page
         userJourney.updateArrivalTime(stops[i].aimed_arrival_time); }
     };
+    console.log("GPS and Station APIs successful")
+    displayJourneyInfo();
   }
 
 
