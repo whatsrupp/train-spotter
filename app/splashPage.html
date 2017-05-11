@@ -1,52 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Find My Train</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/stylesheets/styling.css">
+  <head>
+    <title>Find My Train</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/stylesheets/styling.css">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
 
-  </style>
-</head>
-<body>
+    </style>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
 
-<nav class="navbar">
-  <div class="container-fluid">
-    <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </head>
 
-      <a class="navbar-brand" href="#">
-        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-      </a>
+  <body>
+    <div class="container-fluid text-center">
+      <div id="finder" class="row content">
+        <div class="col-sm-2 sidenav">
+        </div>
+        <div class="col-sm-8 text-center">
+          <h1>Welcome</h1>
+          <input type="text" class="form-control" id="destination" placeholder='Where are you going?'>
+          <hr>
+
+          <button type="button" id="create" class="btn btn-primary btn-lg" >Find My Train!</button>
+
+        </div>
+        <div class="col-sm-2 sidenav">
+
+        </div>
+      </div>
+      <!-- TEST -->
+      <div id="train-info" class="hidden">
+        <div class="page-header">
+          <h1 id="timeline">Timeline</h1>
+        </div>
+        <ul class="timeline">
+          <li>
+            <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="timeline-title" id="train-operator">Train operator: </h4>
+                <p><small class="text-muted" id="last-station"><i class="glyphicon glyphicon-time"></i> Last known station: </small></p>
+              </div>
+              <div class="timeline-body">
+                <h4 id='usr-destination'>Destination: </h4>
+                <h4 id="arrival-time">Arrival Time: </h4>
+                <h4 id="terminus-station">Terminus: </h4>
+                <a href="https://api.whatsapp.com/send?text=I'm%20on%20my%20way">Send to friend</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- TEST -->
     </div>
-  </div>
-</nav>
 
-<div class="container-fluid text-center">
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-    </div>
-    <div class="col-sm-8 text-center">
-      <h1>Welcome</h1>
-      <input type="text" class="form-control" id="usr" placeholder='Where are you going?'>
-      <hr>
+    <footer class="navbar navbar-fixed-bottom text-center">
+      <p>About</p>
+    </footer>
 
-      <button type="button" class="btn btn-primary btn-lg">Find My Train!</button>
-
-    </div>
-    <div class="col-sm-2 sidenav">
-
-    </div>
-  </div>
-</div>
-
-<footer class="navbar navbar-fixed-bottom text-center">
-  <p>About</p>
-</footer>
-
-</body>
+    <script src='src/stationFinder.js'></script>
+    <script src='src/stationsModel.js'></script>
+    <script src='src/trainFinder.js'></script>
+    <script src='../test/mockJson.js'></script>
+    <script src='src/geolocator.js'></script>
+    <script src='../test/spec/mockedAPIS/mockJson.js'></script>
+    <script src='src/initializer.js'></script>
+    <script src='src/destinationModel.js'></script>
+    <script src='src/index.js'></script>
+  </body>
 </html>
