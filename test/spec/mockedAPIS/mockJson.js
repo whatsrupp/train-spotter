@@ -1,7 +1,7 @@
 dataString = function() {
   var mockStationData = jQuery.parseJSON(JSON.stringify(data));
   return mockStationData;
-};
+}
 
 var data = {"success":true,"result":[
 {"tiploccode":"PLMS","stationname":"Plumstead Rail Station","ospoint":{"type":"Point","crs":{"type":"name","properties":{"name":"EPSG27700"}},"coordinates":[544800,178820]},"latlong":{"type":"Point","crs":{"type":"name","properties":{"name":"EPSG4326"}},"coordinates":[0.08425647875589841,51.48979334092551]},"crscode":"PLU","atcocode":"9100PLMS"},
