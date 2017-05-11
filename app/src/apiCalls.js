@@ -29,7 +29,7 @@
       var urlPartTwo = "/timetable.json?app_id=221cce2f&app_key=d209929236fc97196775650c2bdb639e&calling_at=";
       var urlPartThree = "&train_status=passenger";
       var startStation = closestStation.station_code
-      var destination = "SSD"
+      var destination = dest.text
       var getTrainsAPIurl = urlPartOne + startStation + urlPartTwo + destination + urlPartThree;
 
       getPotentialTrains(getTrainsAPIurl)
@@ -48,7 +48,7 @@
 
   function getTrainsCallback (data) {
     var trainUid = data.departures.all[0].train_uid;
-    var destination = "SSD";
+    var destination = dest.text;
     var url = "https://transportapi.com/v3/uk/train/service/train_uid:" + trainUid + "///timetable.json?app_id=221cce2f&app_key=d209929236fc97196775650c2bdb639e&darwin=false&live=false&station_code=" + destination + "&stop_type=arrival";
     $.get(url, function(data){
       getTrainETACallback(data);

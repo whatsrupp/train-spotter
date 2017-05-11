@@ -1,10 +1,11 @@
-
-var stationFinder = new StationFinder();
-var geolocator = new Geolocator(stationFinder);
-var initialize = new Initializer(geolocator, stationFinder);
+//
+// var stationFinder = new StationFinder();
+// var geolocator = new Geolocator(stationFinder);
+// var initialize = new Initializer(geolocator, stationFinder);
 
 // -0.086092, 51.5077
 $(document).ready(function() {
+  userJourney = new Journey();
   dest = new Destination();
   getDetails();
 
@@ -12,6 +13,7 @@ $(document).ready(function() {
     document.getElementById('create').addEventListener('click', function(clickEvent) {
       clickEvent.preventDefault();
       captureUserDestination();
+      getLocation();
     });
   };
 
