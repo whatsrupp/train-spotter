@@ -4,8 +4,8 @@
     <title>Find My Train</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/stylesheets/styling.css">
-    <link rel="stylesheet" href="assets/stylesheets/timeline.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/styling.css" />
+<link rel="stylesheet" type="text/css" href="/stylesheets/timeline.css" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -89,7 +89,7 @@
 
                 <div class='row text-center'>
                   <div class="messaging">
-                    <button type="button" id="whatsapp" class="btn btn-primary btn-lg" >Send to friend</button>
+                    <a id="whatsapp" href="https://api.whatsapp.com">Send to friend</a>
                   </div>
                 </div>
 
@@ -102,17 +102,16 @@
       <p>About</p>
     </footer>
 
-    <script src='src/journey.js'></script>
-    <script src='src/trainETA.js'></script>
-    <script src='src/stationFinder.js'></script>
-    <script src='src/stationsModel.js'></script>
-    <script src='src/trainFinder.js'></script>
-    <script src='../test/mockJson.js'></script>
-    <script src='src/geolocator.js'></script>
-    <script src='../test/spec/mockedAPIS/mockJson.js'></script>
-    <script src='src/initializer.js'></script>
-    <script src='src/destinationModel.js'></script>
+    <script src='/scripts/journey.js'></script>
+    <script src='/scripts/trainETA.js'></script>
+    <script src='/scripts/stationFinder.js'></script>
+    <script src='/scripts/stationsModel.js'></script>
+    <script src='/scripts/trainFinder.js'></script>
+    <script src='/scripts/geolocator.js'></script>
+    <script src='/scripts/initializer.js'></script>
+    <script src='/scripts/destinationModel.js'></script>
     <script src='src/apiCalls.js'></script>
-    <script src='src/index.js'></script>
+    <script src='/scripts/index.js'></script>
+
   </body>
 </html>

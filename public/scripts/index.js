@@ -21,6 +21,7 @@ $(document).ready(function() {
     dest.saveDestination(document.getElementById('destination').value);
     updateInfo();
     switchView();
+    updateMsg();
   };
 
   function updateInfo() {
@@ -33,23 +34,19 @@ $(document).ready(function() {
     $('#arrival-time').append('18:56');
     // get terminus
     $('#terminus-station').append('Bedford');
-  }
+  };
 
   function switchView() {
     $('#train-info').toggleClass('hidden');
     $('#finder').toggleClass('hidden');
   };
 
-// WIP
-  function sendToFriend() {
-    document.getElementById('whatsapp').addEventListener('click', function(clickEvent) {
-      clickEvent.preventDefault();
-      // dummy text, should be a function
+  function updateMsg() {
+    $('a').click(function() {
       var generateMsg = "I'm%20on%20my%20way"
       var url = "https://api.whatsapp.com/send?text=" + generateMsg;
-      $.get(url, function(data) {
-        console.log(data);
-      })
+      // debugger;
+      $('#whatsapp').attr("href", url);
     });
   };
 });
