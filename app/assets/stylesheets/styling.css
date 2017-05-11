@@ -5,6 +5,9 @@
   border-radius: 0;
 }
 
+html, body{
+  background-color: blue !important;
+}
 
 input.placeholder {
     text-align: center;
