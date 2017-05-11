@@ -68,7 +68,9 @@
     for (i = 0; i < stops.length; i++) {
        if(stops[i].station_code == data.stop_of_interest) {
         //  unfinsed -- need to display this on page
-        userJourney.updateArrivalTime(stops[i].aimed_arrival_time); }
+        userJourney.updateArrivalTime(stops[i].aimed_arrival_time);
+        userJourney.updateSOIName(stops[i].station_name);
+      }
     };
     console.log("GPS and Station APIs successful")
     displayJourneyInfo();

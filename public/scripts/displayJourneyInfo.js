@@ -5,11 +5,12 @@
     var specTrain = "You are on the " + userJourney.deptTime + " to: " + userJourney.finalDestination;
     $('#terminus-station').text(specTrain);
 
-    $('#usr-destination').append(dest.getText());
+    $('#usr-destination').append(userJourney.stopOfInterestName);
     // get train operator
     $('#train-operator').append(userJourney.operator);
     // get last stationFinder
-    $('#closest-station').append(userJourney.stopOfInterest);
+    var closestStation = "You're at " + userJourney.closestStation
+    $('#closest-station').append(closestStation);
     // get arrival time
     $('#arrival-time').append(userJourney.arrivalTime);
   };

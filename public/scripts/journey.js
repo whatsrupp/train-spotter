@@ -31,9 +31,13 @@
     updatePlatform: function(platform) {
       this.platform = platform;
     },
-    
-    updateStationName: function(stationName) {
-      this.stationName = stationName;
+
+    updateStationName: function(closestStation) {
+      this.closestStation = closestStation;
+    },
+
+    updateSOIName: function(stopOfInterestName) {
+        this.stopOfInterestName = stopOfInterestName;
     }
 
   };
