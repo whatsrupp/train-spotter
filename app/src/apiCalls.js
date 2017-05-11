@@ -56,15 +56,16 @@
   }
 
   function getTrainETACallback(data) {
-    var stopOfInterest = data.stop_of_interest;
-    var finalDestination = data.destination_name;
-    var operator = data.operator_name;
+    userJourney.updateStopOfInterest(data.stop_of_interest);
+    userJourney.updateFinalDestination(data.destination_name);
+    userJourney.updateOperator(data.operator_name);
     var stops = data.stops;
+
     var i;
     for (i = 0; i < stops.length; i++) {
-       if(stops[i].station_code == stopOfInterest) {
+       if(stops[i].station_code == data.stop_of_interest) {
         //  unfinsed -- need to display this on page
-         console.log(stops[i].aimed_arrival_time); }
+        userJourney.updateArrivalTime(stops[i].aimed_arrival_time); }
     };
   }
 
