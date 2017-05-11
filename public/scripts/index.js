@@ -1,11 +1,3 @@
-//
-// var stationFinder = new StationFinder();
-// var geolocator = new Geolocator(stationFinder);
-// var initialize = new Initializer(geolocator, stationFinder);
-
-// -0.086092, 51.5077
-
-
 $(document).ready(function() {
   userJourney = new Journey();
   dest = new Destination();
@@ -25,10 +17,25 @@ $(document).ready(function() {
     updateMsg();
   };
 
+
+    $('#home-button').click(function() {
+      $('#train-info').removeClass('hidden');
+      $('#finder').removeClass('hidden');
+      $('#train-info').addClass('hidden');
+      // debugger;
+    });
+
+    // document.getElementById('home-button').addEventListener('click', function(clickEvent) {
+    //   clickEvent.preventDefault();
+    //   $('#train-info').toggleClass('hidden');
+    // });
+
   function switchView() {
     $('#train-info').toggleClass('hidden');
     $('#finder').toggleClass('hidden');
   };
+
+
 
   function updateMsg() {
     $('a').click(function() {
