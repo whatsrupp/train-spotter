@@ -26,7 +26,6 @@ var items = '';
         var destination = 'CHX';
         var defaultURL = urlPartOne + startStation + dateNow + timeNow + urlPartTwo + destination + urlPartThree;
         $.get(defaultURL, function(data) {
-
         });
 
 
