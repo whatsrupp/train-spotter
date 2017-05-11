@@ -27,14 +27,15 @@
       var closestStation = data.stations[0];
       var urlPartOne = "https://transportapi.com/v3/uk/train/station/";
       var urlPartTwo = "/timetable.json?app_id=221cce2f&app_key=d209929236fc97196775650c2bdb639e&calling_at=";
+      // var urlPartTwo = "/timetable.json?app_id=e86b2488&app_key=ba2675e540841ef26afa07d55dcf4ded&calling_at=";
       var urlPartThree = "&train_status=passenger";
-      var startStation = closestStation.station_code
-      var destination = dest.text
+      var startStation = closestStation.station_code;
+      var destination = dest.text;
       var getTrainsAPIurl = urlPartOne + startStation + urlPartTwo + destination + urlPartThree;
 
       getPotentialTrains(getTrainsAPIurl)
       // userStations = new Stations(fiveStations);
-      console.log("GPS and Station APIs successful")
+     console.log("GPS and Station APIs successful")
   }
   function error (err){
     console.warn(`ERROR(${err.code}): ${err.message}`);
