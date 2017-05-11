@@ -38,5 +38,15 @@ $(document).ready(function() {
     $('#finder').toggleClass('hidden');
   };
 
-
+  function sendToFriend() {
+    document.getElementById('whatsapp').addEventListener('click', function(clickEvent) {
+      clickEvent.preventDefault();
+      // dummy text, should be a function
+      var generateMsg = "I'm%20on%20my%20way"
+      var url = "https://api.whatsapp.com/send?text=" + generateMsg;
+      $.get(url, function(data) {
+        console.log(data);
+      })
+    });
+  };
 });

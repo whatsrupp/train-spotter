@@ -1,23 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Trains!!</title>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <title>Find My Train</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/stylesheets/styling.css">
+    <link rel="stylesheet" href="assets/stylesheets/timeline.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+
+    </style>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+
+          <a class="navbar-brand" href="#">
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </nav>
   </head>
 
   <body>
-    <h1>Train Locator</h1>
+    <div class="container-fluid text-center">
+      <div id="finder" class="row content">
+        <div class="col-sm-2 sidenav">
+        </div>
+        <div class="col-sm-8 text-center">
+          <h1>Welcome</h1>
+          <input type="text" class="form-control" id="destination" placeholder='Where are you going?'>
+          <hr>
 
+          <button type="button" id="create" class="btn btn-primary btn-lg" >Find My Train!</button>
 
-    <div>
-      <form class="destination" action='#destination' method='post'>
-        Where are you going: <input type="text" id="destination" />
-        <button type="submit" id='create'>Submit</button>
-      </form>
+        </div>
+        <div class="col-sm-2 sidenav">
+
+        </div>
+      </div>
     </div>
-    <div class='usr-destination'></div>
 
-    <script src='src/trainETA.js'></script>
+      <div class="container">
+        <ul class="timeline hidden" id='train-info'>
+            <li>
+              <div class="timeline-badge"><i class="glyphicon glyphicon-road"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="timeline-title" id='terminus-station'>Service to: </h4>
+                  <h5 id='train-operator'> Operator: </h5>
+                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Left DEPART STATION At TIME</small></p>
+
+                  <div class="timeline-body">
+                    <div class='row text-center'>
+                      <div class="col-xs-6 text-left">
+                        <h5 class="timeline-title" id='usr-destination'>Travelling to: </h5>
+                      </div>
+                      <div class="col-xs-6">
+                        <h5 class='timeline-title text-muted' id='arrival-time'>
+                          4:04  <i class="glyphicon glyphicon-time"></i>
+                        </h5>
+                      </div>
+                    </div>
+
+                  <div class='row text-center'>
+                    <div class="col-xs-6 text-left"><h5>Delay</h5></div>
+                    <div class="col-xs-6"><h5 class='text-muted'>0 mins<i class="glyphicon glyphicon-time"></i></h5></div>
+                  </div>
+
+
+                  <div class='row text-center'>
+                    <div class="col-xs-6">
+                      <button type="button" class="btn-sm btn btn-success timeline-button">
+                        <h4><i class="glyphicon glyphicon-ok"></i></h4>
+                      </button>
+                    </div>
+
+                    <div class="col-xs-6">
+                      <button type="button" class="btn-sm btn btn-danger timeline-button">
+                        <h4><i class="glyphicon glyphicon-remove"></i></h4>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class='row text-center'>
+                  <div class="messaging">
+                    <button type="button" id="whatsapp" class="btn btn-primary btn-lg" >Send to friend</button>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+          </ul>
+      </div>
+
+    <footer class="navbar navbar-fixed-bottom text-center">
+      <p>About</p>
+    </footer>
+
     <script src='src/stationFinder.js'></script>
     <script src='src/stationsModel.js'></script>
     <script src='src/trainFinder.js'></script>
@@ -27,6 +111,5 @@
     <script src='src/initializer.js'></script>
     <script src='src/destinationModel.js'></script>
     <script src='src/index.js'></script>
-    <script src='src/apiCalls.js'></script>
   </body>
 </html>
