@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/stylesheets/styling.css">
+    <link rel="stylesheet" href="assets/stylesheets/timeline.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -41,31 +42,55 @@
 
         </div>
       </div>
-      <!-- TEST -->
-      <div id="train-info" class="hidden">
-        <div class="page-header">
-          <h1 id="timeline">Timeline</h1>
-        </div>
-        <ul class="timeline">
-          <li>
-            <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="timeline-title" id="train-operator">Train operator: </h4>
-                <p><small class="text-muted" id="last-station"><i class="glyphicon glyphicon-time"></i> Last known station: </small></p>
-              </div>
-              <div class="timeline-body">
-                <h4 id='usr-destination'>Destination: </h4>
-                <h4 id="arrival-time">Arrival Time: </h4>
-                <h4 id="terminus-station">Terminus: </h4>
-                <a href="https://api.whatsapp.com/send?text=I'm%20on%20my%20way">Send to friend</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <!-- TEST -->
     </div>
+
+      <div class="container">
+        <ul class="timeline hidden" id='train-info'>
+            <li>
+              <div class="timeline-badge"><i class="glyphicon glyphicon-road"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="timeline-title" id='terminus-station'>Service to: </h4>
+                  <h5 id='train-operator'> Operator: </h5>
+                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Left DEPART STATION At TIME</small></p>
+
+                <div class="timeline-body">
+                  <div class='row text-center'>
+                    <div class="col-xs-6 text-left" id='usr-destination'>
+                      <h5 class="timeline-title">Travelling to: </h5>
+                    </div>
+                    <div class="col-xs-6" id='arrival-time'>
+                      <h5 class='timeline-title text-muted'>
+                        4:04  <i class="glyphicon glyphicon-time"></i>
+                      </h5>
+                    </div>
+                  </div>
+
+                  <div class='row text-center'>
+                    <div class="col-xs-6 text-left"><h5>Delay</h5></div>
+                    <div class="col-xs-6"><h5 class='text-muted'>0 mins<i class="glyphicon glyphicon-time"></i></h5></div>
+                  </div>
+
+
+                <div class='row text-center'>
+                  <div class="col-xs-6">
+                    <button type="button" class="btn-sm btn btn-success timeline-button">
+                      <h4><i class="glyphicon glyphicon-ok"></i></h4>
+                    </button>
+                  </div>
+
+                  <div class="col-xs-6">
+                    <button type="button" class="btn-sm btn btn-danger timeline-button">
+                      <h4><i class="glyphicon glyphicon-remove"></i></h4>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <a href="https://api.whatsapp.com/send?phone=text=I'm%20on%20my%20way">Send to friend</a>
+              </div>
+            </li>
+          </ul>
+      </div>
 
     <footer class="navbar navbar-fixed-bottom text-center">
       <p>About</p>
