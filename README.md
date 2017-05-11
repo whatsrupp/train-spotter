@@ -109,27 +109,27 @@ Check out the following into your URL bar in your browser:
 http://localhost:5000/
 ```
 
-### Post Project Review
-#### Wins
-##### Passion
-I like trains. It was brilliant to work solidly on a week on a project of our choosing.
-##### Live Deployment
+# Post Project Review
+## Wins
+### Passion
+[I like trains](https://www.youtube.com/watch?v=hHkKJfcBXcw). It was brilliant to work solidly on a week on a project of our choosing.
+### Live Deployment
 We tested the app on an actual commute! It worked!
 Getting the whatsapp integration and sending out actual messages was brilliant too.
-##### Styling
+### Styling
 It doesn't look half bad, although leaning on the design crutch that is bootstrap did help with that enormously.
-##### API Wizardry
+### API Wizardry
 All of us now feel comfortable with (and possibly even excited about) tackling API calls and writing asychronous Javascript.
-#### Struggles
-##### Asynchronous Javascript
+## Struggles
+### Asynchronous Javascript
 Standalone API calls are fine but when you're chaining 4+ it starts to get a bit challenging, set back the project timeline by about a day. Thorough doc review and youtube research set us on the straight and narrow though!
-##### Overreach
+### Overreach
 As can be expected from any one week project we were too overambitious on the minimum viable product. The features we wanted to implement were slightly beyond our reach in the timeframe of 4 days. After day 2 we realised we needed to largely scale back the app in order to put a nice looking product!
-##### Testing
+### Testing
 'What's a feature test?'    (Rupp, N 2017)
 
 'Spike for life'    (Odendaal, R 2017)
 
 The first two days were spent wrestling with Asynchronous Javascript. This meant numerous overhauls of the codebase which left the testing somewhat to be desired. We didn't manage to get Travis working but to be honest, when you're working to a deadline it's hard not to be impatient with setting up that friendly code miner.
-##### Error Catching
+### Error Catching
 Our programme almost exclusively relies on the perfect user. The interface doesn't give feedback to the user to let it know what it's doing and won't let them know whether it's a slow API call or one that's just flat out broken.
