@@ -19,7 +19,6 @@ $(document).ready(function() {
 
 
     $('#home-button').click(function() {
-      console.log('hello')
       $('#train-info').removeClass('hidden');
       $('#finder').removeClass('hidden');
       $('#train-info').addClass('hidden');
