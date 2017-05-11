@@ -1,118 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Find My Train</title>
-    <link rel="shortcut icon" type="image/png" href="/images/underground.png"/>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="/stylesheets/styling.css" />
-<link rel="stylesheet" type="text/css" href="/stylesheets/timeline.css" />
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-
-    </style>
-    <nav class="navbar">
-      <div class="container-fluid">
-        <div class="navbar-header">
-
-          <a class="navbar-brand" href="#">
-            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-          </a>
-        </div>
-      </div>
-    </nav>
+    <% include partials/asset-load.ejs %>
+    <% include partials/scripts.ejs %>
   </head>
-
   <body>
-    <div class="container-fluid text-center">
-      <div id="finder" class="row content">
-
-        <div class="col-sm-12 text-center" id='home-page-div'>
-          <h1 id='welcome'>Welcome</h1>
-          <input type="text" class="form-control" id="destination" placeholder='Where are you going?'>
-          <hr>
-
-          <button type="button" id="create" class="btn btn-primary btn-lg" >Find My Train!</button>
-        </div>
-
-      </div>
-    </div>
-
-      <div class="container hidden" id='train-info'>
-        <ul class="timeline">
-            <li>
-              <div class="timeline-badge primary"><i class="glyphicon glyphicon-road"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title" id='terminus-station'></h4>
-                  <h5 id='train-operator'> Operator: </h5>
-                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Left DEPART STATION At TIME</small></p>
-                  <h4 class="timeline-title" id='closest-station'></h4>
-
-                  <div class="timeline-body">
-                    <div class='row text-center'>
-                      <div class="col-xs-6 text-left">
-                        <h4 class="timeline-title" id='usr-destination'>Travelling to: </h4>
-                      </div>
-                      <div class="col-xs-6">
-                        <h5 class='timeline-title text-muted' id='arrival-time'>
-                          arrival time<i class="glyphicon glyphicon-time"></i>
-                        </h5>
-                      </div>
-                    </div>
-
-                  <div class='row text-center'>
-                    <div class="col-xs-6 text-left"><h5>Delay</h5></div>
-                    <div class="col-xs-6"><h5 class='text-muted'>0 mins<i class="glyphicon glyphicon-time"></i></h5></div>
-                  </div>
-
-
-                  <div class='row text-center'>
-                    <div class="col-xs-6">
-                      <button type="button" class="btn-sm btn btn-success timeline-button">
-                        <h4><i class="glyphicon glyphicon-ok"></i></h4>
-                      </button>
-                    </div>
-
-                    <div class="col-xs-6">
-                      <button type="button" class="btn-sm btn btn-danger timeline-button">
-                        <h4><i class="glyphicon glyphicon-remove"></i></h4>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class='row text-center'>
-                  <div class="messaging">
-                    <a id="whatsapp" href="https://api.whatsapp.com">Send to friend</a>
-                  </div>
-                </div>
-
-              </div>
-            </li>
-          </ul>
-      </div>
-
-
-
-    <script src='scripts/journey.js'></script>
-    <script src='scripts/trainETA.js'></script>
-    <script src='scripts/stationFinder.js'></script>
-    <script src='scripts/stationsModel.js'></script>
-    <script src='scripts/trainFinder.js'></script>
-    <script src='scripts/geolocator.js'></script>
-    <script src='../test/spec/mockedAPIS/mockJson.js'></script>
-    <script src='scripts/initializer.js'></script>
-    <script src='scripts/destinationModel.js'></script>
-    <script src='scripts/displayJourneyInfo.js'></script>
-    <script src='scripts/apiCalls.js'></script>
-    <script src='scripts/index.js'></script>
-
+    <% include partials/navbar.ejs %>
+    <% include partials/user-form.ejs %>
+    <% include partials/output.ejs %>
+    <% include partials/footer.ejs %>
   </body>
-  <footer class="navbar navbar-fixed-bottom text-center">
-    <p>About</p>
-  </footer>
 </html>

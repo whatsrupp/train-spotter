@@ -26,15 +26,19 @@ $(document).ready(function() {
   };
 
   function goToHomePage(){
-    $('#train-info').removeClass('hidden');
-    $('#finder').removeClass('hidden');
-    $('#finder').addClass('hidden');
+    $('a').click(function() {
+      $('#train-info').removeClass('hidden');
+      $('#finder').removeClass('hidden');
+      $('#finder').addClass('hidden');
+    });
   }
 
   function switchView() {
     $('#train-info').toggleClass('hidden');
     $('#finder').toggleClass('hidden');
   };
+
+
 
   function updateMsg() {
     $('a').click(function() {
