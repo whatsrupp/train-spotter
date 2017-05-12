@@ -66,6 +66,9 @@ so that they know I'm delayed en route
 As a commuter
 I want...
 ```
+### API Flowchart
+Here's a flowchart of the asynchronous API calls used in this project
+![alt text](/docs/images/flowchartApis.png 'api flowchart')
 
 ### Technology
 - Node.js: Handy for single page web app deployment to Heroku
