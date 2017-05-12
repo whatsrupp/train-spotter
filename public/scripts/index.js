@@ -10,9 +10,9 @@ $(document).ready(function() {
       captureUserDestination();
       // hide the destination search bar
       $('#finder').toggleClass('hidden');
+      getLocation();
       var target = document.getElementById('spinner')
       spinner = new Spinner(opts).spin(target);
-      getLocation();
     });
   };
 
