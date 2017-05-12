@@ -73,6 +73,7 @@ Here's a flowchart of the asynchronous API calls used in this project
 ### Technology
 - Node.js: Handy for single page web app deployment to Heroku
 - Javascript: Goes without saying
+- jQuery: For making all our lives that much better
 - Jasmine: Unit testing
 - Travis: Nah this one's a lie. Maybe one day the green build stamp will be there
 - Geolocator: Inbuilt into most browsers, pretty handy really
