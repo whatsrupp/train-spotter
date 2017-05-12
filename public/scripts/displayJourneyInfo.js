@@ -1,6 +1,10 @@
 "use strict";
 (function(exports){
   function displayJourneyInfo() {
+
+    spinner.stop();
+    // show trip info
+    $('#train-info').toggleClass('hidden');
     // get terminus
     var specTrain = "You are on the " + userJourney.deptTime + " to: " + userJourney.finalDestination;
     $('#terminus-station').text(specTrain);

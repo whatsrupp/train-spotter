@@ -3,17 +3,21 @@ $(document).ready(function() {
   dest = new Destination();
   getDetails();
   activateHomeButton();
+
   function getDetails() {
     document.getElementById('create').addEventListener('click', function(clickEvent) {
       clickEvent.preventDefault();
       captureUserDestination();
+      // hide the destination search bar
+      $('#finder').toggleClass('hidden');
+      var target = document.getElementById('spinner')
+      spinner = new Spinner(opts).spin(target);
       getLocation();
     });
   };
 
   function captureUserDestination() {
     dest.saveDestination(document.getElementById('destination').value);
-    switchView();
     updateMsg();
   };
 
@@ -23,11 +27,6 @@ $(document).ready(function() {
       $('#finder').removeClass('hidden');
       $('#train-info').addClass('hidden');
     });
-  };
-
-  function switchView() {
-    $('#train-info').toggleClass('hidden');
-    $('#finder').toggleClass('hidden');
   };
 
   function updateMsg() {
