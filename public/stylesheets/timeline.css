@@ -5,12 +5,12 @@
 body, html, .container{
 
   height: 100%;
-
-
 }
+
 .timeline-panel{
   background-color: white;
 }
+
 .timeline-button{
   width: 100%;
 }
@@ -218,4 +218,8 @@ img, #whatsapp {
 
 .bold-title {
   color: black;
+}
+
+h3 {
+  display: inline;
 }
