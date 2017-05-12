@@ -4,6 +4,8 @@ $(document).ready(function() {
   getDetails();
   activateHomeButton();
 
+  $("#destination").focus();
+
   function getDetails() {
     document.getElementById('create').addEventListener('click', function(clickEvent) {
       clickEvent.preventDefault();
