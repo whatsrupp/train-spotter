@@ -1,50 +1,56 @@
 'use strict';
+// <script src="../public/scripts/models/destination.js"></script>
+var assert = require('assert') //Inbuilt node assertations model
+var Journey = require('../../../public/scripts/models/journey.js')
 describe('Journey Model',function(){
-  var journey = new Journey()
+  debugger;
+  var journey = new Journey.Journey()
   it('stores a stop of interest', function(){
     var stopOfInterest = 'Hell';
     journey.updateStopOfInterest(stopOfInterest);
-    expect(journey.stopOfInterest).toEqual(stopOfInterest);
+    // expect(journey.stopOfInterest).toEqual(stopOfInterest);
+    assert.equal(journey.stopOfInterest, stopOfInterest);
+
   });
 
   it('stores a final destination', function(){
     var finalDestination = 'Roast and Toast';
     journey.updateFinalDestination(finalDestination);
-    expect(journey.finalDestination).toEqual(finalDestination);
+    assert.equal(journey.finalDestination, finalDestination);
+
   });
 
   it('stores the train operator', function(){
     var operator = "Larry's Locomotives";
     journey.updateOperator(operator);
-    expect(journey.operator).toEqual(operator);
+    assert.equal(journey.operator, operator);
+
   });
 
   it('stores an arrival time', function(){
     var arrivalTime = '8:00'
     journey.updateArrivalTime(arrivalTime);
-    expect(journey.arrivalTime).toEqual(arrivalTime);
+    assert.equal(journey.arrivalTime, arrivalTime);
   });
   it('stores an arrival time', function(){
     var depTime = '6:58'
     journey.updateDepTime(depTime);
-    expect(journey.deptTime).toEqual(depTime);
+    assert.equal(journey.deptTime, depTime);
   });
   it('stores a platform', function(){
     var platform = '9 and three Quarters'
     journey.updatePlatform(platform);
-    expect(journey.platform).toEqual(platform);
-
+    assert.equal(journey.platform, platform);
   });
+
   it('updates stop of interest', function(){
     var stopOfInterestName = "EL Rug"
     journey.updateSOIName(stopOfInterestName);
-    expect(journey.stopOfInterestName).toEqual(stopOfInterestName);
-
+    assert.equal(journey.stopOfInterestName, stopOfInterestName);
   });
   it('updates closest station name', function(){
     var closestStation = 'The boonies'
     journey.updateStationName(closestStation);
-    expect(journey.closestStation).toEqual(closestStation);
-
+    assert.equal(journey.closestStation, closestStation);
   });
 });
