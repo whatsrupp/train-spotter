@@ -6,6 +6,7 @@
 }
 .glyphicon.glyphicon-home{
   color: white;
+  padding: 5px;
 }
 
 #welcome{
@@ -16,15 +17,9 @@
   margin:auto;
 }
 
-#home-page-div > input{
-}
-html {
-}
-
 body {
   background-image: url("/images/1511.jpg");
   background-size: cover;
-s
 }
 
 .navbar{
