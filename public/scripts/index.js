@@ -43,7 +43,7 @@ $(document).ready(function() {
     var openString = "I'm%20on%20my%20way%20from";
     var closestStation = userJourney.closestStation;
     var middleString = "and%20will%20arrive%20at";
-    var destinationStation = userJourney.finalDestination;
+    var destinationStation = userJourney.stopOfInterestName;
     var arrivalTime = "at%20" + userJourney.arrivalTime;
     var operator = "..." + userJourney.operator + "%20willing"
     var emojiTrain = "🚂 "
