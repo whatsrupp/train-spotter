@@ -211,3 +211,7 @@ ul > .button {}
 a {
   font-size: 25px;
 }
+
+img, #whatsapp {
+  margin-left: 8px;
+}
