@@ -3,11 +3,16 @@ $(document).ready(function() {
   dest = new Destination();
   getDetails();
   activateHomeButton();
+
   function getDetails() {
     document.getElementById('create').addEventListener('click', function(clickEvent) {
       clickEvent.preventDefault();
       captureUserDestination();
+      // hide the destination search bar
+      $('#finder').toggleClass('hidden');
       getLocation();
+      var target = document.getElementById('spinner')
+      spinner = new Spinner(opts).spin(target);
     });
   };
 
