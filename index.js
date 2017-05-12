@@ -1,18 +1,28 @@
-var express = require('express');
-var app = express();
+(function(exports){
 
-app.set('port', (process.env.PORT || 5000));
+  var express = require('express');
+  var app = express();
 
-app.use(express.static(__dirname + '/public'));
+  app.set('port', (process.env.PORT || 5000));
 
-// views is directory for all template files
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
+  app.use(express.static(__dirname + '/public'));
 
-app.get('/', function(request, response) {
-  response.render('index');
-});
+  // views is directory for all template files
+  app.set('views', __dirname + '/views');
+  app.set('view engine', 'ejs');
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
-});
+  app.get('/', function(request, response) {
+    response.render('index');
+  });
+
+  app.listen(app.get('port'), function() {
+    console.log('Node app is running on port', app.get('port'));
+  });
+
+  module.exports = app;
+  if (!module.parent) {
+    app.listen(process.env.PORT, function(){
+    console.log("Server listening on port " + app.get('port'));
+  });
+}
+})(this)

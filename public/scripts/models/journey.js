@@ -41,6 +41,5 @@
     }
 
   };
-
   exports.Journey = Journey;
 })(this);
