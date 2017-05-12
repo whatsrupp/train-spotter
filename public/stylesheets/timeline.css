@@ -215,3 +215,7 @@ a {
 img, #whatsapp {
   margin-left: 8px;
 }
+
+.bold-title {
+  color: black;
+}
