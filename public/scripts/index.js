@@ -18,7 +18,8 @@ $(document).ready(function() {
 
   function captureUserDestination() {
     dest.saveDestination(document.getElementById('destination').value);
-    updateMsg();
+    switchView();
+    sendMsg();
   };
 
   function activateHomeButton() {
@@ -29,11 +30,30 @@ $(document).ready(function() {
     });
   };
 
-  function updateMsg() {
+  function switchView() {
+    $('#train-info').toggleClass('hidden');
+    $('#finder').toggleClass('hidden');
+  };
+
+  function sendMsg() {
     $('a').click(function() {
-      var generateMsg = "I'm%20on%20my%20way"
-      var url = "https://api.whatsapp.com/send?text=" + generateMsg;
+      var url = constructMsg()
       $('#whatsapp').attr("href", url);
     });
   };
+
+  function constructMsg() {
+    var whatsappUrl = "https://api.whatsapp.com/send?text=";
+    var space = "%20";
+    var openString = "I'm%20on%20my%20way%20from";
+    var closestStation = userJourney.closestStation;
+    var middleString = "and%20will%20arrive%20at";
+    var destinationStation = userJourney.stopOfInterestName;
+    var arrivalTime = "at%20" + userJourney.arrivalTime;
+    var operator = "..." + userJourney.operator + "%20willing"
+    var emojiTrain = "🚂 "
+    var emojiThumbsUp = "👍"
+    var generateMsg = whatsappUrl + emojiTrain + space + openString + space + closestStation + space + middleString + space + destinationStation + space + arrivalTime + operator + space + emojiThumbsUp ;
+    return generateMsg
+  }
 });
