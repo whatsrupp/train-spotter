@@ -18,7 +18,6 @@ $(document).ready(function() {
 
   function captureUserDestination() {
     dest.saveDestination(document.getElementById('destination').value);
-    switchView();
     sendMsg();
   };
 
@@ -28,11 +27,6 @@ $(document).ready(function() {
       $('#finder').removeClass('hidden');
       $('#train-info').addClass('hidden');
     });
-  };
-
-  function switchView() {
-    $('#train-info').toggleClass('hidden');
-    $('#finder').toggleClass('hidden');
   };
 
   function sendMsg() {
